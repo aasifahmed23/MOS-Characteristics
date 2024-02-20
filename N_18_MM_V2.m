@@ -1,5 +1,6 @@
 function [Ids,Vth] = N_18_MM_V2(Vgs,Vds,Vbs,W,L)
 %% NMOS model card
+%% Refer pg# 161 of BSIM4.3.0 MOSFET Model here : https://cmosedu.com/cmos1/BSIM4_manual.pdf
 TNOM    = 27 ;
 TOX     = 4.1E-9;
 XJ      = 1E-7; 
