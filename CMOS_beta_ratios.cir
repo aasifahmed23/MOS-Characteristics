@@ -1,0 +1,18 @@
+* CMOS Inverter VTC with beta_n beta_p variation
+VDD 2 0 DC 1.8V
+VIN 1 0 DC 0V
+* for beta_n/beta_p = 1 
+MN1 3 1 0 0 NMOD W=360n L=180n
+MP1 3 1 2 2 PMOD W=1080n L=180n
+* for beta_n/beta_p = 3
+MN2 4 1 0 0 NMOD W=360n L=180n
+MP2 4 1 2 2 PMOD W=360n L=180n
+* for beta_n/beta_p = 1/3
+MN3 5 1 0 0 NMOD W=360n L=180n
+MP3 5 1 2 2 PMOD W=3240n L=180n
+.DC VIN 0 1.8V 0.025V
+.MODEL NMOD NMOS(VTO=0.7 KP= 51u)
+.MODEL PMOD PMOS(VTO=-0.7 KP= 17u)
+.PROBE 
+.END
+ 
